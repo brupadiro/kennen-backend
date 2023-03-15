@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "webservices",
+  "info": {
+    "singularName": "webservice",
+    "pluralName": "webservices",
+    "displayName": "webservice",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "apiKey": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
+    }
+  }
+}

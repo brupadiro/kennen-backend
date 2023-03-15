@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payments",
+  "info": {
+    "singularName": "payment",
+    "pluralName": "payments",
+    "displayName": "payment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Impuestos",
+        "Facturas",
+        "suppliers",
+        "sueldos"
+      ]
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "payed",
+        "pending"
+      ],
+      "default": "pending"
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "comments": {
+      "type": "string"
+    },
+    "store": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::webservice.webservice"
+    }
+  }
+}
